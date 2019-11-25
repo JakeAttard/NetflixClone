@@ -3,6 +3,12 @@
 
     if(isset($_POST["submitButton"])) {
         $firstName = FormSanitizer::sanitizeFormString($_POST["firstName"]);
+        $lastName = FormSanitizer::sanitizeFormString($_POST["lastName"]);
+        $username = FormSanitizer::sanitizeFormUsername($_POST["username"]);
+        $email = FormSanitizer::sanitizeFormEmail($_POST["email"]);
+        $confirmEmail = FormSanitizer::sanitizeFormEmail($_POST["email2"]);
+        $password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
+        $confirmPassword = FormSanitizer::sanitizeFormPassword($_POST["password2"]);
     }
 
 ?>
