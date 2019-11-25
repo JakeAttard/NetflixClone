@@ -70,3 +70,8 @@ body {
 .column .header span {
     font-size: 14px;
 }
+
+.column .header img {
+    width: 50%;
+    height: 100px;
+}

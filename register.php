@@ -16,6 +16,7 @@
         <div class="signInContainer">
             <div class="column">
                 <div class="header">
+                    <img src="assets/images/netflixlogo.jpg" title="Netflix Logo" alt="Netflix Logo"/>
                     <h3>Sign Up</h3>
                     <span>to continue to NetflixClone</span>
                 </div>
