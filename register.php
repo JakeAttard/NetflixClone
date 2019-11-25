@@ -1,7 +1,10 @@
-<?php 
+<?php
+    require_once("includes/classes/FormSanitizer.php");
+
     if(isset($_POST["submitButton"])) {
-        echo "Form was submitted";
+        $firstName = FormSanitizer::sanitizeFormString($_POST["firstName"]);
     }
+
 ?>
 
 <!DOCTYPE html>
