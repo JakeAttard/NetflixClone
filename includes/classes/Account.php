@@ -9,11 +9,12 @@ class Account {
         $this->con = $con;
     }
 
-    public function register($fn, $ln, $un, $em, $ce, $pw, $cpw) {
+    public function register($fn, $ln, $un, $em, $cem, $pw, $cpw) {
         $this->validateFirstName($fn);
         $this->validateLastName($ln);
-        $this->validateLastName($un);
-        $this->validateLastName($un);
+        $this->validateUsername($un);
+        $this->validateEmails($em, $cem);
+        $this->validatePasswords($pw, $cpw);
     }
 
     private function validateFirstName($fn) {
@@ -44,9 +45,41 @@ class Account {
         }
     }
 
+    private function validateEmails($em, $cem) {
+        if($em != $cem) {
+            array_push($this->errorArray, Constants::$emailsDontMatch);
+            return;
+        }
+
+        if(!filter_var($em, FILTER_VALIDATE_EMAIL)) {
+            array_push($this->errorArray, Constants::$emailInvalid);
+            return;
+        }
+
+        $query = $this->con->prepare("SELECT * FROM users WHERE email=:em");
+        $query->bindValue(":em", $em);
+
+        $query->execute();
+
+        if($query->rowCount() != 0) {
+            array_push($this->errorArray, Constants::$emailTaken);
+        }
+    }
+
+    private function validatePasswords($pw, $cpw) {
+        if($pw != $cpw) {
+            array_push($this->errorArray, Constants::$passwordsDontMatch);
+            return;
+        }
+
+        if(strlen($pw) < 6 || strlen($pw) > 25) {
+            array_push($this->errorArray, Constants::$passwordLength);
+        }
+    }
+
     public function getError($error) {
         if(in_array($error, $this->errorArray)) {
-            return $error;
+            return "<span class='errorMessage'>$error</span>";
         }
     }
 }
