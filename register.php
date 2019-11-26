@@ -26,9 +26,8 @@
         <div class="signInContainer">
             <div class="column">
                 <div class="header">
-                    <img src="assets/images/netflixlogo.jpg" title="Netflix Logo" alt="Netflix Logo"/>
-                    <h3>Sign Up</h3>
-                    <span>to continue to NetflixClone</span>
+                    <h1>Sign Up</h1>
+                    <h2>to continue to NetflixClone</h2>
                 </div>
 
                 <form method="POST">

@@ -16,18 +16,21 @@ if(isset($_POST["submitButton"])) {
 <div class="signInContainer">
     <div class="column">
         <div class="header">
-            <img src="assets/images/netflixlogo.jpg" title="Netflix Logo" alt="Netflix Logo"/>
-            <h3>Sign In</h3>
-            <span>to continue to NetflixClone</span>
+            <h1>Sign In</h1>
+            <h2>Sign in to start watching shows and movies<br> or restart your membership.</h2>
         </div>
 
         <form method="POST">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" name="loginButton" value="LOGIN">
+            <input type="submit" name="loginButton" value="SIGN IN">
         </form>
 
-        <a href="register.php" class="signUpMessage">Dont have an account? Sign up here!</a>
+        <hr>
+        <span class="loginNewSpan">
+            <b>New to NetflixClone?</b>
+        </span>
+        <a href="register.php" class="button">Try 30 days free</a>
     </div>
 </div>
 </body>

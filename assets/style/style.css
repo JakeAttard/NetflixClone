@@ -7,12 +7,12 @@ body {
 
 * {
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
+    /*color: #333;*/
     box-sizing: border-box;
 }
 
 .signInContainer {
-    background-color: #efefee;
+    background-image: url("../images/netflixbackground.jpg");
     height: 100vh;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .column {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.75);
     min-height: 300px;
     max-height: 100%;
     width: 450px;
@@ -37,40 +37,55 @@ body {
 .column form input[type="text"],
 .column form input[type="email"],
 .column form input[type="password"] {
-    font-size: 14px;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 1px solid #dede;
+    /*font-size: 14px;*/
+    /*margin: 10px 0;*/
+    /*border: none;*/
+    /*border-bottom: 1px solid #dede;*/
+    border-radius: 4px;
+    background: #333;
+    margin-bottom: 16px;
+    height: 50px;
+    line-height: 50px;
+    padding: 16px 20px 0;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    border-color: #333;
 }
 
 .column form input[type="submit"] {
-    background-color: #4285F4;
+    background-color: #E50914;
     color: #fff;
-    height: 36px;
-    width: 88px;
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
     border: none;
-    border-radius: 3px;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    margin: 24px 0px 12px;
+    padding: 12px;
     font-size: 16px;
+    border-radius: 4px;
 }
 
 .column .header {
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
-.column .header h3 {
-    font-size: 24px;
-    font-weight: 400;
+.column .header h1 {
+    font-size: 32px;
+    font-weight: bold;
     line-height: 32px;
     margin: 0;
+    margin-bottom: 28px;
     padding-top: 16px;
-    color: #000;
+    color: #fff;
 }
 
-.column .header span {
-    font-size: 14px;
+.column .header h2 {
+    color: white;
+    font-size: 1em;
+    font-weight: normal;
+    margin: -0.75em 0 1.25em;
 }
 
 .column .header img {
@@ -84,8 +99,26 @@ body {
     text-decoration: none;
 }
 
-.column .signUpMessage {
-    font-size: 14px;
-    font-weight: 400;
+.button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: black;
+    margin: 24px 0px 12px;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
     text-decoration: none;
+}
+
+.loginNewSpan {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    padding-top: 30px;
 }
