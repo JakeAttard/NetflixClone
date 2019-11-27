@@ -18,7 +18,7 @@
         $success = $account->register($firstName, $lastName, $username, $email, $confirmEmail, $password, $confirmPassword);
 
         if($success) {
-            // Store session
+            $_SESSION["userLoggedIn"] = $username;
             header("Location: index.php");
         }
     }
