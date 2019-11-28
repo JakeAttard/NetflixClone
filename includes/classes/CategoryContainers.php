@@ -27,9 +27,35 @@ class CategoryContainers {
         $categoryId = $sqlData["id"];
         $title = $title == null ? $sqlData["name"] : $title;
 
+        if($tvShows && $movies) {
+            $entities = EntityProvider::getEntities($this->con, $categoryId, 30);
+        } else if($tvShows) {
+            // Get tv show entities
+        } else {
+            // Get movie entities
+        }
 
+        if(sizeof($entities) == 0) {
+            return;
+        }
 
-        return $title . "<br>";
+        $entitiesHtml = "";
+
+        $previewProvider = new PreviewProvider($this->con, $this->username);
+
+        foreach($entities as $entity) {
+            $entitiesHtml .= $previewProvider->createEntityPreviewSquare($entity);
+        }
+
+        return "<div class='category'>
+                    <a href='category.php?id=$categoryId'>
+                        <h3>$title</h3>
+                    </a>
+                    
+                    <div class='entities'>
+                        $entitiesHtml
+                    </div>
+                </div>";
     }
 }
 
