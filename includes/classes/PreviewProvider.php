@@ -20,12 +20,25 @@ class PreviewProvider {
         $preview = $entity->getPreview();
         $thumbnail = $entity->getThumbnail();
 
+        // TODO: ADD SUBTITLE
+
         return "<div class='previewContainer'>
                     <img src='$thumbnail' class='previewImage' hidden>
                     
                     <video autoplay muted class='previewVideo'>
                         <source src='$preview' type='video/mp4'>
                     </video>
+                    
+                    <div class='previewOverlay'>
+                        <div class='mainDetails'>
+                            <h3>$name</h3>
+                            
+                            <div class='butttons'>
+                                <button>Play</button>
+                                <button>Volume</button>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>";
     }
