@@ -174,4 +174,14 @@ body {
     border-radius: 2px;
     margin-bottom: 15px;
     margin-right: 5px;
+    cursor: pointer;
+}
+
+.previewContainer .previewOverlay .mainDetails button li {
+    color: inherit;
+}
+
+.previewContainer .previewOverlay .mainDetails button:hover {
+    background-color: #e6e6e6;
+    color: #000;
 }
