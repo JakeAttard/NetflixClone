@@ -278,3 +278,7 @@ a {
     overflow-y: auto;
     width: 200px;
 }
+
+.previewCategories.noScroll .category .entities {
+    white-space: normal;
+}
