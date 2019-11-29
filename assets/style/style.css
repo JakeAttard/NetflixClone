@@ -227,3 +227,7 @@ a {
     overflow-y: hidden;
     white-space: nowrap;
 }
+
+.wrapper .previewCategories {
+    padding: 0 50px;
+}
