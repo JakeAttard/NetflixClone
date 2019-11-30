@@ -286,3 +286,24 @@ a {
 .watchContainer video {
     width: 100%;
 }
+
+.wrapper .watchContainer .videoControls.watchNav {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .watchContainer .videoControls.watchNav h1 {
+    color: #fff;
+}
+
+.wrapper .watchContainer .videoControls.watchNav button {
+    font-size: 50px;
+    padding: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
