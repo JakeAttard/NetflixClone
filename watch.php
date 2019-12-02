@@ -18,14 +18,14 @@
     </div>
 
     <div class="videoControls upNext">
-        <button><i class="fas fa-redo"></i></button>
+        <button onclick="restartVideo();"><i class="fas fa-redo"></i></button>
 
         <div class="upNextContainer">
             <h2>Up Next:</h2>
             <h3><?php echo $upNextVideo->getTitle(); ?></h3>
             <h3><?php echo $upNextVideo->getSeasonAndEpisode(); ?></h3>
 
-            <button class="playNext">
+            <button class="playNext" onclick="watchVideo(<?php echo $upNextVideo->getId(); ?>);">
                 <i class="fas fa-play"></i> Play
             </button>
         </div>
