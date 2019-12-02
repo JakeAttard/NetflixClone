@@ -38,6 +38,13 @@ a {
     padding: 0 60px;
     height: 70px;
     box-sizing: border-box;
+    min-width: 150px;
+    transition: background-color 200ms linear;
+}
+
+.wrapper .topBar.scrolled {
+    background-color: #141414;
+    transition: background-color 200ms linear;
 }
 
 .wrapper .topBar .logoContainer {
