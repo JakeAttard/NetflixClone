@@ -29,6 +29,47 @@ a {
     background-color: #141414;
 }
 
+.wrapper .topBar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.wrapper .topBar .logoContainer {
+    height: 40px;
+}
+
+.wrapper .topBar .logoContainer img {
+    height: 100%;
+}
+
+.wrapper .topBar .navLinks {
+    display: flex;
+    list-style: none;
+}
+
+.wrapper .topBar .navLinks a {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.wrapper .topBar .rightItems {
+    flex: 1;
+    text-align: right;
+}
+
+.wrapper .topBar .rightItems i {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
 .signInContainer {
     background-image: url("../images/netflixbackground.jpg");
     height: 100vh;
