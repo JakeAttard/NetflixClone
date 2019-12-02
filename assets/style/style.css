@@ -180,6 +180,12 @@ a {
     margin: 15px 0;
 }
 
+.previewContainer .previewOverlay .mainDetails h4 {
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
 .previewContainer .previewOverlay .mainDetails button {
     background-color: rgba(51, 51, 51, 0.4);
     color: #fff;
