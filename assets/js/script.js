@@ -98,3 +98,7 @@ function restartVideo() {
 function watchVideo(videoId) {
     window.location.href = "watch.php?id=" + videoId;
 }
+
+function showUpNext() {
+    $(".upNext").fadeIn();
+}
