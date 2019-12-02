@@ -263,6 +263,7 @@ a {
 .episodeContainer .contents {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 230px;
 }
 
@@ -330,4 +331,12 @@ a {
 
 .watchNav {
     z-index: 2;
+}
+
+.seen {
+    color: #2ecc71;
+    font-size: 26px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
