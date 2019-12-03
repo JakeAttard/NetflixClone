@@ -1,7 +1,7 @@
 <div class="topBar">
     <div class="logoContainer">
         <a href="index.php">
-            <img src="assets/images/netflixlogo.jpg" alt="Netflix Logo">
+            <img src="assets/images/netflixlogo.svg" alt="Netflix Logo">
         </a>
     </div>
 
