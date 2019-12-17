@@ -87,4 +87,16 @@ if(isset($_POST["savePasswordButton"])) {
             <input type="submit" name="savePasswordButton" value="Save">
         </form>
     </div>
+
+    <div class="formSection">
+        <h2>Subscription</h2>
+
+        <?php
+            if($user->getIsSubscribed()) {
+                echo "<h3>You are subscribed! Go to PayPal to cancel.</h3>";
+            } else {
+                echo "<a href='billing.php'>Subscribe to NetflixClone.</a>";
+            }
+        ?>
+    </div>
 </div>
