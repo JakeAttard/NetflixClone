@@ -48,6 +48,10 @@
             <input type="submit" name="loginButton" value="SIGN IN">
         </form>
 
+        <div class="forgotPassword">
+            <a href="requestReset.php">Forgot Password? Click here to reset.</a>
+        </div>
+
         <hr>
         <span class="loginNewSpan">
             <b>New to NetflixClone?</b>
